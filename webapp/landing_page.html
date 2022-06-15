@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website raiting form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <style>
+      html, body {
+      height: 100%;
+      background: #669999;
+      font-family: 'Uchen', serif;
+      }
+      body, h1, h3, input { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Georgia, Arial, sans-serif;
+      font-size: 16px;
+      color: #000;
+      }
+      h1, h3 {
+      padding: 12px 0;
+      font-weight: 400;
+
+      }
+      h1 {
+      font-size: 28px;
+      }
+      .main-block, .info {
+      display: flex;
+      flex-direction: column;
+      }
+      .main-block {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100%;
+      background: url("/uploads/media/default/0001/01/49bff73f282c2c21f3341f1fe457fe35337b1792.jpeg") no-repeat center;
+      background-size: cover;
+      }
+      form {
+      width: 86%; 
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px; 
+      border: solid 1px #ccc;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      background: #ebebeb; 
+      }
+      .info-item {
+      width: 100%;
+      }
+      input {
+      width: calc(100% - 57px);
+      height: 36px;
+      padding-left: 10px; 
+      margin: 0 0 12px -5px;
+      border-radius: 0 5px 5px 0;
+      border: solid 1px #cbc9c9;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+      background: #fff; 
+      }
+      .icon {
+      padding: 9px 15px;
+      margin-top: -1px;
+      border-radius: 5px 0 0 5px;
+      border: solid 0px #cbc9c9;
+      background: #666;
+      color: #fff;
+      }
+      input[type=radio] {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      text-indent: 32px;
+      cursor: pointer;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 0.5px solid #8ebf42;
+      background: #fff;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 4px;
+      top: 5px;
+      left: 4px;
+      border-bottom: 3px solid #8ebf42;
+      border-left: 3px solid #8ebf42;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      textarea {
+      width: 99%;
+      margin-bottom: 12px;
+      }
+      button {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px; 
+      border: none;
+      background: #669999; 
+
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #669999;
+      }
+      .grade-type div {
+      display: flex;
+      margin: 6px 0;
+      }
+      @media (min-width: 568px) {
+      .info {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      }
+      .info-item {
+      width: 48%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="main-block">
+
+      <img src="img/logo.jpeg" alt="logo"  style="border-radius: 100%; width: 100px; border-color: black; "  />
+      <h1><b>JSW STEEL Pvt. Ltd</b></h1>
+      <form action="/">
+        <div class="info">
+          <!-- <div class="info-item">
+            <label class="icon" for="name"><i class="fas fa-user"></i></label>
+            <input type="text" name="name" id="name" placeholder="User Name" required/>
+          </div> -->
+         <!--  <div  class="info-item">
+            <label class="icon" for="age"><i class="fas fa-calendar"></i></i></label>
+            <input type="text" name="age" id="age" placeholder="Age" required/>
+          </div> -->
+          <!-- <div  class="info-item">
+            <label class="icon" for="email"><i class="fas fa-envelope"></i></label>
+            <input type="text" name="email" id="email" placeholder="Email" required/>
+          </div> -->
+          <!-- <div  class="info-item">
+            <label class="icon" for="phone"><i class="fas fa-phone"></i></label>
+            <input type="text" name="phone" id="phone" placeholder="Phone" required/>
+          </div> -->
+        </div>
+        <div class="grade-type">
+          <h3 style="font-size: 20px;"> <strong>Parameters Input : </strong></h3>
+          <div> 
+            <input type="number" value="none" id="radioOne" name="grade" placeholder="Slab Width" step="any" required/>
+          </div>
+          <div>
+              <input type="number" value="none" id="radioOne" name="grade" placeholder="Slab Length" step="any"  required/>
+           
+          </div>
+          <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="AL" step="any"  required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="B" step="any"  required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="C" step="any"  required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="CA" step="any" required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="NB" step="any" required/>
+          </div>
+              <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="CR" step="any" required/>
+          </div>
+            <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="CU" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="MN" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="MO" step="any" required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Ni" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="P" step="any" required/>
+          </div>
+            <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="S" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Si" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Ti" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="V" step="any" required/>
+          </div>
+              <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Reheating Furnace Exit Temp" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Finishing Temp" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Coiling Temp" step="any" required/>
+          </div>
+            <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="FM Exit Thickness" step="any" required/>
+          </div>
+              <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Coil Outr Dia" step="any" required/>
+          </div>   <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Avg line speed" step="any" required/>
+          </div>   <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Weld pressure" step="any" required/>
+          </div>   <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Reduction Ratio" step="any" required/>
+          </div>   <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="ACL-Thickness" step="any" required/>
+          </div>   <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="ACL-Width" step="any" required/>
+          </div>   <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="ACL-Length" step="any" required/>
+          </div>   <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="O2 in Heating Element Furnace" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Radiant Tube Furnace Dewpoint" step="any" required/>
+          </div>
+             <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="After Tube Cooling Dewpoint" step="any" required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Rapid Jet Cooling Dewpoint" step="any" required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Coating Thickness" step="any" required/>
+          </div>
+           <div>
+             <input type="number" value="none" id="radioOne" name="grade" placeholder="Drying Furnace Press" step="any" required/>
+          </div>
+           
+        <!--   <div>
+         <input type="number" value="none" id="radioOne" name="grade" placeholder="Parameter1" required/>
+          </div> -->
+        </div>
+        
+      
+        <button type="submit" style="padding: 15px;" href="/">Predict </button>
+       <!-- <h3 style="font-size: 20px;"> <strong>Accuracy Output : </strong></h3> -->
+          <!-- <textarea rows="4"></textarea> -->
+          <h4>B50 : </h4> 
+          <h4>Hardness : </h4>
+          <h4>Permeability : </h4>
+          <h4>CoreLoss Before Aging : </h4>
+          <h4>CoreLosee After Aging: </h4>
+      </form>
+    </div>
+    <footer style="text-align: center; padding-bottom: 20px;">&copy; Copyright 2021 JSW Steel</footer>
+  </body>
+</html>
